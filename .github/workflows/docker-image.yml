@@ -16,11 +16,11 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v4
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag sus_app_image:$(date +%s)
+      run: docker build . --file Dockerfile --tag sus_app_image_$(date +%s)
     - name: Login to DockerHub
       uses: docker/login-action@v2
       with:
         username: ${{ secrets.DOCKERHUB_USERNAME }}
         password: ${{ secrets.DOCKERHUB_TOKEN }}
     - name: Push image
-      run: docker push gary93/2025cloud:sus_app_image:$(date +%s)
+      run: docker push gary93/2025cloud:sus_app_image_$(date +%s)
