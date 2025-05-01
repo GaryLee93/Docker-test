@@ -14,3 +14,5 @@ docker run -p 5000:5000 --name sus_app env-image
 ``` 
 
 3. Now you can go to 127.0.0.1:5000 to check this app
+
+# 專案自動產生Container Image 的邏輯與Tag的選擇邏輯
